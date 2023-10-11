@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Centigrade to Fahrenheit Converter</h1>
+    
+    <!-- Input field for user to enter degrees in Centigrade -->
+    <p>Enter degrees in Centigrade: <input type="text" id="centigradeInput"></p>
+    
+    <!-- Button to trigger the conversion when clicked -->
+    <button onclick="convertCentigradeToFahrenheit()">Convert</button>
+    
+    <!-- Placeholder to display the conversion result -->
+    <p id="result"></p>
+
+    <script>
+        // Function to convert degrees Centigrade to Fahrenheit
+        function convertCentigradeToFahrenheit() {
+            // Get the input value in degrees Centigrade from the input field
+            var centigrade = parseFloat(document.getElementById("centigradeInput").value);
+            
+            // Perform the temperature conversion using a well-named variable
+            var fahrenheit = (centigrade * 9/5) + 32;
+            
+            // Display the result with a clear and descriptive message on the page
+            var resultElement = document.getElementById("result");
+            resultElement.textContent = centigrade + " degrees Centigrade is equal to " + fahrenheit + " degrees Fahrenheit.";
+        }
+    </script>
+</body>
+</html>
